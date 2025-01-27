@@ -141,17 +141,88 @@
             //}
 
             // 4) 알파벳 판별 프로그램
-            Console.Write("문자를 입력하세요");
-            char input = Console.ReadLine()[0];
+            //Console.Write("문자를 입력하세요");
+            //char input = Console.ReadLine()[0];
 
-            if ((input >= 'a' && input <= 'z')|| (input >= 'A' && input <= 'Z'))
+            //if ((input >= 'a' && input <= 'z')|| (input >= 'A' && input <= 'Z'))
+            //{
+            //    Console.WriteLine("알파벳입니다");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("알파벳이 아닙니다.");
+            //}
+
+
+
+
+            // [코드스니펫] for문 기초
+            //int i = 0;
+            //for (i = 1; i < 10; i++)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+
+            ////[코드스니펫] while문 기초
+            //int j = 0;
+            //while (j < 10) 
+            //{
+            //    Console.WriteLine(j);
+            //    j++;
+
+            //}
+
+            ////[코드스니펫] 구구단 출력
+            //for (int k = 2; k <= 9; k++)
+            //{
+            //    for (int m = 1; m <= 9; m++)
+            //    {
+            //        Console.WriteLine(k + " x " + m + " = " + (k * m)+"\t");
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            //[코드스니펫] break와 continue 기초
+            //for (int i = 1; i <= 10; i++)
+            //{
+            //    if (i % 3 == 0)
+            //    {
+            //        continue; // 3의 배수인 경우 다음 숫자로 넘어감
+            //    }
+
+            //    Console.WriteLine(i);
+            //    if (i == 7)
+            //    {
+            //        break; // 7이 출력된 이후에는 반복문을 빠져나감
+            //    }
+            //}
+
+            // [코드스니펫] break와 continue 예제
+            int sum = 0;
+
+            while (true)
             {
-                Console.WriteLine("알파벳입니다");
+                Console.Write("숫자를 입력하세요: ");
+                int input = int.Parse(Console.ReadLine());
+
+                if (input == 0)
+                {
+                    Console.WriteLine("프로그램을 종료합니다.");
+                    break;
+                }
+
+                if (input < 0)
+                {
+                    Console.WriteLine("음수는 무시합니다.");
+                    continue;
+                }
+
+                sum += input;
+                Console.WriteLine("현재까지의 합: " + sum);
             }
-            else
-            {
-                Console.WriteLine("알파벳이 아닙니다.");
-            }
+
+            Console.WriteLine("합계: " + sum);
         }
     }
 }
