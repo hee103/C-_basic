@@ -199,30 +199,89 @@
             //}
 
             // [코드스니펫] break와 continue 예제
-            int sum = 0;
+            //int sum = 0;
 
-            while (true)
+            //while (true)
+            //{
+            //    Console.Write("숫자를 입력하세요: ");
+            //    int input = int.Parse(Console.ReadLine());
+
+            //    if (input == 0)
+            //    {
+            //        Console.WriteLine("프로그램을 종료합니다.");
+            //        break;
+            //    }
+
+            //    if (input < 0)
+            //    {
+            //        Console.WriteLine("음수는 무시합니다.");
+            //        continue;
+            //    }
+
+            //    sum += input;
+            //    Console.WriteLine("현재까지의 합: " + sum);
+            //}
+
+            //Console.WriteLine("합계: " + sum);
+
+
+
+
+
+            // 1) 가위바위보
+            //string[] choices = { "가위", "바위", "보" };
+            //string playerChoice = " ";
+            //string computerChoice = choices[new Random().Next(0, 3)];
+
+            //while (playerChoice != computerChoice)
+            //{
+            //    Console.Write("하나를 선택해주세요");
+            //    playerChoice = Console.ReadLine();
+
+            //    if (playerChoice == computerChoice)
+            //    {
+            //        Console.WriteLine("비겼습니다");
+            //    }
+            //    else if (playerChoice == "가위" && computerChoice == "보" || playerChoice == "바위" && computerChoice == "가위" || playerChoice == "보" && computerChoice == "바위")
+            //    {
+            //        Console.WriteLine("플레이어 승리");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("컴퓨터 승리");
+            //    }
+            //}
+
+            //2) 숫자 맞추기
+            int targetNumber = new Random().Next(1,101);
+            int guess = 0;
+            int count = 0;
+            Console.WriteLine("1부터 100 사이의 숫자를 맞춰보세요");
+            
+
+            while(guess != targetNumber)
             {
-                Console.Write("숫자를 입력하세요: ");
-                int input = int.Parse(Console.ReadLine());
-
-                if (input == 0)
+                Console.Write("추측한 숫자를 입력하세요: ");
+                guess = int.Parse(Console.ReadLine());
+                count++;
+                if (guess > targetNumber)
                 {
-                    Console.WriteLine("프로그램을 종료합니다.");
-                    break;
+                    Console.WriteLine("숫자가 너무 큽니다.");
+                    
+                }
+                else if (guess < targetNumber)
+                {
+                    Console.WriteLine("숫자가 너무 작습니다.");
+                    
+                }
+                else
+                {
+                    Console.WriteLine("정답입니다!");
+                    Console.WriteLine($"시도횟수: {count}");
                 }
 
-                if (input < 0)
-                {
-                    Console.WriteLine("음수는 무시합니다.");
-                    continue;
-                }
-
-                sum += input;
-                Console.WriteLine("현재까지의 합: " + sum);
             }
 
-            Console.WriteLine("합계: " + sum);
         }
     }
 }
