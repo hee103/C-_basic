@@ -111,20 +111,22 @@
 }
 
 {
-    List<int> list = new List<int>();
-    list.Add(1);
-    list.Add(2);
-    list.Add(3);
+    // 리스트
+    //List<int> list = new List<int>();
+    //list.Add(1);
+    //list.Add(2);
+    //list.Add(3);
 
-    list.Remove(2);
+    //list.Remove(2);
 
-    for (int i = 0; i< list.Count; i++)
-    {
-        Console.WriteLine(list[i]);
-    }
+    //for (int i = 0; i< list.Count; i++)
+    //{
+    //    Console.WriteLine(list[i]);
+    //}
 
-    foreach (int i in list)
-    {
-        Console.WriteLine(i);
-    }
+    //foreach (int i in list)
+    //{
+    //    Console.WriteLine(i);
+    //}
 }
+
